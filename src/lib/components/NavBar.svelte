@@ -2,12 +2,23 @@
   import Icon from "$lib/components/Icon.svelte";
   import { page } from "$app/stores";
 
-  // List of navigation items, add more here if you make more pages :D
+  // Function to scroll to the footer
+  function scrollToFooter() {
+    const footer = document.querySelector('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // List of navigation items
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Content", href: "/content" },
+    // Add an 'About Us' navItem with a special click handler
+    { label: "About Us", href: "#", action: scrollToFooter },
   ];
 </script>
+
 
 <nav>
   <ul class="left">

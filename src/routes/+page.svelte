@@ -23,8 +23,9 @@
   <title>Home</title>
 </svelte:head>
 
-<h1>Hello!</h1>
-<h3>Welcome to FullyHacks 2024</h3>
+<h1> Welcome to GroovyEvents </h1>
+
+<h2> Your best place to find events in your school! </h2>
 
 <article class="candies">
   <header>
@@ -66,4 +67,18 @@
       border-color: var(--pico-secondary);
     }
   }
+  
+
+	:global(body) {
+		background-color: #ab47bc;
+		color: #0084f6;
+		transition: background-color 0.3s;
+    padding: 0 0 1000px 0;
+
+	}
+	:global(body.dark-mode) {
+		background-color: #1d3040;
+		color: #bfc2c7;
+	}
 </style>
+
